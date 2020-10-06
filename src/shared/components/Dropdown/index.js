@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import PropTypes from "prop-types";
 
 import { RiArrowDownSFill, RiArrowUpSFill } from "react-icons/ri";
 
@@ -67,6 +68,16 @@ const Dropdown = ({ onChange, data = [], labelBeforeSelectedItem = "", removeLab
       </List>
     </Container>
   );
+};
+
+Dropdown.propTypes = {
+  onChange: PropTypes.func.isRequired,
+  labelBeforeSelectedItem: PropTypes.string,
+  removeLabelAfterSelectedItem: PropTypes.string,
+  emptyLabel: PropTypes.string,
+  value: PropTypes.element,
+  dataValue: PropTypes.string,
+  dataLabel: PropTypes.string,
 };
 
 export default Dropdown;
