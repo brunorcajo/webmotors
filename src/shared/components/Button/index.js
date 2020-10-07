@@ -4,6 +4,10 @@ import PropTypes from "prop-types";
 import { Container, Icon } from "./styles";
 
 const Button = ({ children, onClick, icon, ...rest }) => {
+  React.useEffect(() => {
+    console.log("render button");
+  });
+
   return (
     <Container onClick={onClick} icon={icon} {...rest}>
       {icon && <Icon>{icon}</Icon>}
@@ -22,4 +26,6 @@ Button.defaultProps = {
   onClick: () => {},
 };
 
-export default Button;
+//Button.whyDidYouRender = true;
+
+export default React.memo(Button);

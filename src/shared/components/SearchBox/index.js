@@ -40,11 +40,11 @@ const SearchBox = () => {
     });
   };
 
-  const cleanupForm = () => {
+  const cleanupForm = React.useCallback(() => {
     dispatch({
       type: TYPES.CLEANUP_FORM,
     });
-  };
+  }, [dispatch]);
 
   const handleChangeStatus = (value) => {
     const hasStatus = status.includes(value);

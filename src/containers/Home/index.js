@@ -16,6 +16,7 @@ const App = () => {
 
   const filter = () => {
     // todo: context search data stored
+    // todo: useMemo for return values
 
     return vehicles;
   };
